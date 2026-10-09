@@ -1,4 +1,4 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,218 +6,222 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wildlife | My Photography</title>
 
-  
-<style>
-  * {
-    box-sizing: border-box;
-  }
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-  body {
-    margin: 0;
-    background: #0b100d;
-    color: #f4f0e6;
-    font-family: Arial, sans-serif;
-  }
+    body {
+      margin: 0;
+      background: #0b100d;
+      color: #f4f0e6;
+      font-family: Arial, sans-serif;
+    }
 
-  .hero {
-    position: relative;
-    min-height: 100vh;
-    min-height: 100svh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    overflow: hidden;
-    background: #0b100d;
-  }
+    /* Opening screen */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      min-height: 100svh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+      background: #0b100d;
+    }
 
-  .hero img,
     .hero video {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-  }
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
 
-  .hero::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.25),
-      rgba(0, 0, 0, 0.45) 50%,
-      rgba(0, 0, 0, 0.75)
-    );
-  }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.25),
+        rgba(0, 0, 0, 0.45) 50%,
+        rgba(0, 0, 0, 0.75)
+      );
+    }
 
-  .hero-content {
-    position: relative;
-    z-index: 1;
-    padding: 30px 20px;
-  }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      padding: 30px 20px;
+    }
 
-  .eyebrow {
-    font-size: 12px;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    color: #d0d0c4;
-  }
+    .eyebrow {
+      font-size: 12px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: #d0d0c4;
+    }
 
-  .hero h1 {
-    font-size: clamp(42px, 8vw, 100px);
-    font-weight: 500;
-    letter-spacing: -2px;
-    margin: 24px 0;
-  }
+    .hero h1 {
+      font-size: clamp(42px, 8vw, 100px);
+      font-weight: 500;
+      letter-spacing: -2px;
+      margin: 24px 0;
+    }
 
-  .hero-description {
-    font-size: 16px;
-    color: #e0ded6;
-    letter-spacing: 1px;
-  }
+    .hero-description {
+      font-size: 16px;
+      color: #e0ded6;
+      letter-spacing: 1px;
+    }
 
-  .scroll-note {
-    margin-top: 55px;
-    font-size: 11px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: #d0d0c4;
-  }
+    .scroll-note {
+      display: inline-block;
+      margin-top: 55px;
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #d0d0c4;
+      text-decoration: none;
+    }
 
-/* Destination sections */
-.destinations {
-  padding: 100px 7%;
-  background: #0b100d;
-}
+    /* Destination sections */
+    .destinations {
+      padding: 100px 7%;
+      background: #0b100d;
+    }
 
-.section-label {
-  color: #b5b9aa;
-  font-size: 11px;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-}
+    .section-label {
+      color: #b5b9aa;
+      font-size: 11px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+    }
 
-.destinations h2,
-.location-gallery h2 {
-  font-size: clamp(32px, 5vw, 58px);
-  font-weight: 400;
-  margin: 20px 0 40px;
-}
+    .destinations h2,
+    .location-gallery h2 {
+      font-size: clamp(32px, 5vw, 58px);
+      font-weight: 400;
+      margin: 20px 0 40px;
+    }
 
-.destination-card {
-  display: block;
-  position: relative;
-  max-width: 1100px;
-  height: 460px;
-  margin: 0 auto 20px;
-  overflow: hidden;
-  color: #f4f0e6;
-  text-decoration: none;
-  background: #182019;
-}
+    .destination-card {
+      display: block;
+      position: relative;
+      max-width: 1100px;
+      height: 460px;
+      margin: 0 auto 20px;
+      overflow: hidden;
+      color: #f4f0e6;
+      text-decoration: none;
+      background: #182019;
+    }
 
-.destination-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.7s ease;
-}
+    .destination-card img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.7s ease;
+    }
 
-.destination-card:hover img {
-  transform: scale(1.04);
-}
+    .destination-card:hover img {
+      transform: scale(1.04);
+    }
 
-.destination-card::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.85),
-    transparent 75%
-  );
-}
+    .destination-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.85),
+        transparent 75%
+      );
+    }
 
-.destination-caption {
-  position: absolute;
-  z-index: 1;
-  left: 35px;
-  right: 25px;
-  bottom: 30px;
-  text-align: left;
-}
+    .destination-caption {
+      position: absolute;
+      z-index: 1;
+      left: 35px;
+      right: 25px;
+      bottom: 30px;
+      text-align: left;
+    }
 
-.destination-caption p {
-  font-size: 11px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-}
+    .destination-caption p {
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
 
-.destination-caption h3 {
-  font-size: clamp(28px, 4vw, 46px);
-  font-weight: 400;
-  margin: 12px 0;
-}
+    .destination-caption h3 {
+      font-size: clamp(28px, 4vw, 46px);
+      font-weight: 400;
+      margin: 12px 0;
+    }
 
-.location-gallery {
-  padding: 100px 7%;
-  background: #111712;
-  scroll-margin-top: 30px;
-}
+    /* Destination galleries */
+    .location-gallery {
+      padding: 100px 7%;
+      background: #111712;
+      scroll-margin-top: 30px;
+    }
 
-.gallery-note {
-  color: #b5b9aa;
-  line-height: 1.8;
-}
+    .gallery-note {
+      color: #b5b9aa;
+      line-height: 1.8;
+    }
 
-.gallery-photo {
-  display: block;
-  width: 100%;
-  max-width: 1000px;
-  max-height: 75vh;
-  object-fit: contain;
-  margin: 40px auto;
-}
+    .gallery-photo {
+      display: block;
+      width: 100%;
+      max-width: 1000px;
+      max-height: 75vh;
+      object-fit: contain;
+      margin: 40px auto;
+    }
 
-@media (max-width: 600px) {
-  .destinations,
-  .location-gallery {
-    padding: 70px 6%;
-  }
+    @media (max-width: 600px) {
+      .destinations,
+      .location-gallery {
+        padding: 70px 6%;
+      }
 
-  .destination-card {
-    height: 360px;
-  }
+      .destination-card {
+        height: 360px;
+      }
 
-  .destination-caption {
-    left: 20px;
-    bottom: 20px;
-  }
-}
-
-</style>
+      .destination-caption {
+        left: 20px;
+        bottom: 20px;
+      }
+    }
+  </style>
 </head>
 
-<body>
-  
 <body>
 
   <!-- Opening screen -->
   <section class="hero">
 
     <video
-        class="hero-video"
-        autoplay
-        muted
-        loop
-        playsinline
-        preload="auto"
-        aria-label="Wildlife footage"
+      class="hero-video"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="metadata"
+      aria-label="Wildlife footage"
     >
-    <source src="videos/GorillaVidTestv2.mov" type="video/quicktime">
+      <source
+        src="videos/GorillaVidTestv2.mov"
+        type="video/quicktime"
+      >
+      Your browser does not support this video.
     </video>
 
     <div class="hero-content">
@@ -237,81 +241,75 @@
   </section>
 
   <!-- Destinations -->
- 
-<section class="destinations" id="destinations">
+  <section class="destinations" id="destinations">
 
-  <p class="section-label">The field journal</p>
+    <p class="section-label">The field journal</p>
 
-  <h2>Places I've been.</h2>
+    <h2>Places I've been.</h2>
 
-  <!-- Destination 01: Balule -->
-  <a href="#balule-gallery" class="destination-card">
+    <!-- Destination 01: Balule -->
+    <a href="#balule-gallery" class="destination-card">
 
-    
-    <img
+      <img
         src="photos/zebra.jpg"
         alt="Zebra in Balule National Park"
-    >
+      >
 
+      <div class="destination-caption">
+        <p>01 / South Africa</p>
+        <h3>Balule National Park</h3>
+        <p>Explore destination ↗</p>
+      </div>
 
-    <div class="destination-caption">
-      <p>01 / South Africa</p>
-      <h3>Balule National Park</h3>
-      <p>Explore destination ↗</p>
-    </div>
+    </a>
 
-  </a>
+    <!-- Destination 02: Bwindi -->
+    <a href="#bwindi-gallery" class="destination-card">
 
-  <!-- Destination 02: Bwindi -->
-  <a href="#bwindi-gallery" class="destination-card">
+      <img
+        src="photos/Gorilla1.jpg"
+        alt="Gorilla in the forest"
+      >
 
-    <img
-      src="photos/Gorilla1.jpg"
-      alt="Gorilla in the forest"
-    >
+      <div class="destination-caption">
+        <p>02 / Uganda</p>
+        <h3>Bwindi Impenetrable Forest</h3>
+        <p>Explore destination ↗</p>
+      </div>
 
-    <div class="destination-caption">
-      <p>02 / Uganda</p>
-      <h3>Bwindi Impenetrable Forest</h3>
-      <p>Explore destination ↗</p>
-    </div>
+    </a>
 
-  </a>
+  </section>
 
-</section>
+  <!-- Balule gallery -->
+  <section class="location-gallery" id="balule-gallery">
 
-<!-- Destination 01: Balule -->
-<section class="location-gallery" id="balule-gallery">
+    <p class="section-label">01 / South Africa</p>
 
-  <p class="section-label">01 / South Africa</p>
+    <h2>Balule National Park.</h2>
 
-  <h2>Balule National Park.</h2>
-
-  <p class="gallery-note">
-    Into the African bush. Wildlife, landscapes,
-    and moments from the wild.
-  </p>
-
+    <p class="gallery-note">
+      Into the African bush. Wildlife, landscapes,
+      and moments from the wild.
+    </p>
 
     <img
-        class="gallery-photo"
-        src="photos/zebra.jpg"
-        alt="Zebra photographed in Balule National Park"
+      class="gallery-photo"
+      src="photos/zebra.jpg"
+      alt="Zebra photographed in Balule National Park"
     >
 
+    <p class="gallery-note">
+      Photographs and video from this destination
+      will be added here.
+    </p>
 
-  <p class="gallery-note">
-    Photographs and video from this destination
-    will be added here.
-  </p>
-
-</section>
-
+  </section>
 
   <!-- Bwindi gallery -->
   <section class="location-gallery" id="bwindi-gallery">
 
-    <p class="section-label">01 / Uganda</p>
+    <p class="section-label">02 / Uganda</p>
 
     <h2>Bwindi Impenetrable Forest.</h2>
 
@@ -334,5 +332,5 @@
   </section>
 
 </body>
-</body>
 </html>
+```
